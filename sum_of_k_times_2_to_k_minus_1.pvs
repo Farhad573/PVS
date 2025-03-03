@@ -1,0 +1,28 @@
+%%
+% @theory: sum_of_k_times_2_to_k_minus_1
+% @author: farhad
+% @date: Mon, 03 Mar 2025 19:43:32 GMT
+%%
+sum_of_k_times_2_to_k_minus_1: THEORY
+  BEGIN 
+    % Import necessary libraries that have expt defined
+  IMPORTING reals
+
+  % Variable declarations
+  n: VAR nat
+  
+  % Define the sum recursively
+  sum_expr(n): RECURSIVE real =
+    IF n = 0 THEN 0
+    ELSE n * expt(2, n-1) + sum_expr(n-1)
+    ENDIF
+    MEASURE (LAMBDA n: n)
+  
+  % Closed form formula
+  closed_form(n): real = (n-1) * expt(2, n) + 1
+  
+  % Main theorem stating the equality
+  % @QED sum_theorem proved by farhad on Mon, 03 Mar 2025 19:44:08 GMT
+  sum_theorem: THEOREM
+    FORALL (n: nat): sum_expr(n) = closed_form(n)
+  END sum_of_k_times_2_to_k_minus_1

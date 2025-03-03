@@ -1,0 +1,23 @@
+(leaky_bucket
+ (milk_after_miles_TCC1 0
+  (milk_after_miles_TCC1-1 nil 3950021266 ("" (subtype-tcc) nil nil)
+   nil nil
+   (milk_after_miles subtype "(number_fields.-)(leaky_bucket.n, 1)"
+    "nat")))
+ (milk_after_miles_TCC2 0
+  (milk_after_miles_TCC2-1 nil 3950021266
+   ("" (termination-tcc) nil nil) nil nil
+   (milk_after_miles termination
+    "leaky_bucket.milk_after_miles((number_fields.-)(leaky_bucket.n, 1))"
+    "nil")))
+ (final_milk_theorem 0
+  (final_milk_theorem-1 nil 3950021266 ("" (grind) nil nil)
+   ((total_miles const-decl "posnat" leaky_bucket nil)
+    (leak_factor const-decl "posreal" leaky_bucket nil)
+    (initial_milk const-decl "posreal" leaky_bucket nil)
+    (milk_after_miles def-decl "real" leaky_bucket nil)
+    (posrat_div_posrat_is_posrat application-judgement "posrat"
+     rationals nil)
+    (real_times_real_is_real application-judgement "real" reals nil))
+   shostak)))
+

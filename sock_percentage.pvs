@@ -1,0 +1,42 @@
+%%
+% @theory: sock_percentage
+% @author: farhad
+% @date: Mon, 03 Mar 2025 18:08:08 GMT
+%%
+sock_percentage: THEORY
+  BEGIN 
+    % Define sock colors and quantities
+  white_pairs: posnat = 5
+  black_pairs: posnat = 3
+  red_pairs: posnat = 2
+  
+  % Convert pairs to individual socks
+  white_socks: posnat = 2 * white_pairs
+  black_socks: posnat = 2 * black_pairs
+  red_socks: posnat = 2 * red_pairs
+  
+  % Calculate total socks
+  total_socks: posnat = white_socks + black_socks + red_socks
+  
+  % Define percentage calculation function
+  percentage(part: real, whole: posnat): real = 100 * part / whole
+  
+  % Calculate percentage of red socks
+  red_percentage: real = percentage(red_socks, total_socks)
+  
+  % Main theorem to prove
+  % @QED red_is_twenty_percent proved by farhad on Mon, 03 Mar 2025 19:31:16 GMT
+  red_is_twenty_percent: THEOREM
+    red_percentage = 20
+    
+  % Supporting lemmas for the proof
+  total_socks_value: LEMMA
+    total_socks = 20
+    
+  red_socks_value: LEMMA
+    red_socks = 4
+    
+  percentage_calculation: LEMMA
+    FORALL (n: posnat, d: posnat): 
+      n = 4 AND d = 20 IMPLIES percentage(n, d) = 20
+  END sock_percentage

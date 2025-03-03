@@ -1,0 +1,22 @@
+%%
+% @theory: product_formula
+% @author: farhad
+% @date: Mon, 03 Mar 2025 19:49:27 GMT
+%%
+product_formula: THEORY
+  BEGIN 
+    % Import necessary libraries
+  IMPORTING reals
+  
+  % Define the product recursively from 1 to n
+  product_expr(n: posnat): RECURSIVE real =
+    IF n = 1 THEN 2  % 1 + 1/1 = 2
+    ELSE product_expr(n-1) * (1 + 1/n)
+    ENDIF
+    MEASURE n
+  
+  % Main theorem stating the equality
+  % @QED product_theorem proved by farhad on Mon, 03 Mar 2025 19:50:41 GMT
+  product_theorem: THEOREM
+    FORALL (n: posnat): product_expr(n) = n+1
+  END product_formula

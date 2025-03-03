@@ -1,0 +1,27 @@
+{
+ "prime_generating_function.difference_is_20": [
+  {
+   "info": {
+    "theory": "prime_generating_function",
+    "formula": "difference_is_20",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5691aab1b05ab80ef992c3e78ca2bf274be70383334b371fd15ab57f4cc6da83"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "difference_is_20",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

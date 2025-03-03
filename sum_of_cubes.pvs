@@ -1,0 +1,25 @@
+%%
+% @theory: sum_of_cubes
+% @author: farhad
+% @date: Mon, 03 Mar 2025 19:36:09 GMT
+%%
+sum_of_cubes: THEORY
+  BEGIN 
+    % Variable declarations
+  n: VAR nat
+  
+  % Define the sum of cubes from 0 to n recursively
+  sum_cubes(n): RECURSIVE nat =
+    IF n = 0 THEN 0
+    ELSE expt(n, 3) + sum_cubes(n-1)
+    ENDIF
+    MEASURE (LAMBDA n: n)
+  
+  % Closed form formula for sum of cubes
+  closed_form(n): nat = (expt(n, 2) * expt(n+1, 2)) / 4
+  
+  % Main theorem stating the equality
+  % @QED sum_cubes_theorem proved by farhad on Mon, 03 Mar 2025 19:39:02 GMT
+  sum_cubes_theorem: THEOREM
+    FORALL (n: nat): sum_cubes(n) = closed_form(n)
+  END sum_of_cubes

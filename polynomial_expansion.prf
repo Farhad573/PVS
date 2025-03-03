@@ -1,0 +1,13 @@
+(polynomial_expansion
+ (expansion_theorem 0
+  (expansion_theorem-1 nil 3950023140 ("" (grind) nil nil)
+   ((expt def-decl "real" exponentiation nil)
+    (poly1 const-decl "real" polynomial_expansion nil)
+    (poly2 const-decl "real" polynomial_expansion nil)
+    (product const-decl "real" polynomial_expansion nil)
+    (expanded const-decl "real" polynomial_expansion nil)
+    (real_plus_real_is_real application-judgement "real" reals nil)
+    (real_minus_real_is_real application-judgement "real" reals nil)
+    (real_times_real_is_real application-judgement "real" reals nil))
+   shostak)))
+

@@ -1,0 +1,45 @@
+%%
+% @theory: prime_generating_function
+% @author: farhad
+% @date: Mon, 03 Mar 2025 20:42:55 GMT
+%%
+prime_generating_function: THEORY
+  BEGIN 
+    % Import necessary libraries
+  IMPORTING reals
+  
+  % Define the function f
+  f(n: nat): nat = expt(n, 2) + n + 17
+  
+  % Domain constraint that f generates primes for this range
+%   prime_generating_range: AXIOM
+%     FORALL (n: nat): 0 <= n AND n <= 15 IMPLIES prime?(f(n))
+  
+  % Main theorem to prove the difference
+  % @QED difference_is_20 proved by farhad on Mon, 03 Mar 2025 20:47:57 GMT
+  difference_is_20: THEOREM
+    f(10) - f(9) = 20
+  
+  % Supporting lemmas for calculation
+  f_10_value: LEMMA
+    f(10) = 127
+    
+  f_9_value: LEMMA
+    f(9) = 107
+    
+  % Step-by-step calculation for f(10)
+  f_10_calculation: LEMMA
+    expt(10, 2) + 10 + 17 = 100 + 10 + 17 = 127
+    
+  % Step-by-step calculation for f(9)
+  f_9_calculation: LEMMA
+    expt(9, 2) + 9 + 17 = 81 + 9 + 17 = 107
+    
+  % General formula for the difference between consecutive terms
+  difference_formula: LEMMA
+    FORALL (n: nat): f(n+1) - f(n) = 2*n + 2
+    
+  % Application of the difference formula at n=9
+  apply_formula: LEMMA
+    LET n = 9 IN 2*n + 2 = 20
+  END prime_generating_function

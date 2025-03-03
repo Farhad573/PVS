@@ -1,0 +1,52 @@
+%%
+% @theory: polynomial_expansion
+% @author: farhad
+% @date: Mon, 03 Mar 2025 20:36:57 GMT
+%%
+polynomial_expansion: THEORY
+  BEGIN 
+    % Import necessary libraries
+  IMPORTING reals
+
+  % Define variables
+  x: VAR real
+  
+  % Define the first polynomial: 2x^5 + 3x^2
+  poly1(x): real = 2 * expt(x, 5) + 3 * expt(x, 2)
+  
+  % Define the second polynomial: x^4 - 4x^2 + 3x - 8
+  poly2(x): real = expt(x, 4) - 4 * expt(x, 2) + 3 * x - 8
+  
+  % Define the product of the two polynomials
+  product(x): real = poly1(x) * poly2(x)
+  
+  % Define the claimed expanded result
+  expanded(x): real = 2 * expt(x, 9) - 8 * expt(x, 7) + 9 * expt(x, 6) - 
+                      16 * expt(x, 5) - 12 * expt(x, 4) + 9 * expt(x, 3) - 
+                      24 * expt(x, 2)
+  
+  % The main theorem stating that the product equals the expanded form
+  % @QED expansion_theorem proved by farhad on Mon, 03 Mar 2025 20:39:03 GMT
+  expansion_theorem: THEOREM
+    FORALL (x: real): product(x) = expanded(x)
+    
+  % Supporting lemmas for the expansion steps
+  distributive_property: LEMMA
+    FORALL (x: real): 
+      product(x) = 
+        (2 * expt(x, 5)) * poly2(x) + (3 * expt(x, 2)) * poly2(x)
+        
+  % Expansion of (2x^5)(x^4 - 4x^2 + 3x - 8)
+  first_term_expansion: LEMMA
+    FORALL (x: real):
+      (2 * expt(x, 5)) * poly2(x) =
+        2 * expt(x, 9) - 8 * expt(x, 7) + 6 * expt(x, 6) - 16 * expt(x, 5)
+        
+  % Expansion of (3x^2)(x^4 - 4x^2 + 3x - 8)
+  second_term_expansion: LEMMA
+    FORALL (x: real):
+      (3 * expt(x, 2)) * poly2(x) =
+        3 * expt(x, 6) - 12 * expt(x, 4) + 9 * expt(x, 3) - 24 * expt(x, 2)
+        
+  
+  END polynomial_expansion

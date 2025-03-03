@@ -1,0 +1,27 @@
+{
+ "leaky_bucket.final_milk_theorem": [
+  {
+   "info": {
+    "theory": "leaky_bucket",
+    "formula": "final_milk_theorem",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "2cc8508d3522174f0c4510c0b4baea691b876dcd74012e214a96291787c08f73"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "final_milk_theorem",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

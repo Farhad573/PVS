@@ -1,0 +1,44 @@
+%%
+% @theory: leaky_bucket
+% @author: farhad
+% @date: Mon, 03 Mar 2025 20:06:31 GMT
+%%
+leaky_bucket: THEORY
+  BEGIN 
+    % Define constants
+  initial_milk: posreal = 2  % 2 gallons initial
+  leak_factor: posreal = 2/3 % After each mile, 2/3 of milk remains
+  total_miles: posnat = 3    % Sam walks 3 miles
+  
+  % Define function for milk remaining after n miles
+  milk_after_miles(n: nat): RECURSIVE real =
+    IF n = 0 THEN initial_milk
+    ELSE leak_factor * milk_after_miles(n-1)
+    ENDIF
+    MEASURE n
+  
+  % Main theorem to prove
+  % @QED final_milk_theorem proved by farhad on Mon, 03 Mar 2025 20:07:53 GMT
+  final_milk_theorem: THEOREM
+    milk_after_miles(total_miles) = 16/27
+    
+  % Supporting lemmas for step-by-step verification
+  milk_after_one_mile: LEMMA
+    milk_after_miles(1) = 4/3
+    
+  milk_after_two_miles: LEMMA
+    milk_after_miles(2) = 8/9
+    
+  % Alternative direct formula
+  direct_formula: LEMMA
+    FORALL (n: nat): 
+      milk_after_miles(n) = initial_milk * expt(leak_factor, n)
+    
+  % Explicit calculation steps
+  calculation: LEMMA
+    expt(leak_factor, total_miles) = expt(2/3, 3) = 8/27
+    
+  % Final verification using direct formula
+  direct_verification: LEMMA
+    initial_milk * expt(leak_factor, total_miles) = 2 * 8/27 = 16/27
+  END leaky_bucket

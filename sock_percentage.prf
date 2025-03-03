@@ -1,0 +1,20 @@
+(sock_percentage
+ (red_is_twenty_percent 0
+  (red_is_twenty_percent-1 nil 3950019073 ("" (grind) nil nil)
+   ((red_pairs const-decl "posnat" sock_percentage nil)
+    (red_socks const-decl "posnat" sock_percentage nil)
+    (white_pairs const-decl "posnat" sock_percentage nil)
+    (white_socks const-decl "posnat" sock_percentage nil)
+    (black_pairs const-decl "posnat" sock_percentage nil)
+    (black_socks const-decl "posnat" sock_percentage nil)
+    (total_socks const-decl "posnat" sock_percentage nil)
+    (percentage const-decl "real" sock_percentage nil)
+    (red_percentage const-decl "real" sock_percentage nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (posint_times_posint_is_posint application-judgement "posint"
+     integers nil)
+    (even_times_int_is_even application-judgement "even_int" integers
+     nil))
+   shostak)))
+

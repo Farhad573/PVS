@@ -1,0 +1,27 @@
+{
+ "polynomial_expansion.expansion_theorem": [
+  {
+   "info": {
+    "theory": "polynomial_expansion",
+    "formula": "expansion_theorem",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "19b234251fbebc411ef31d6941bc3ccc4137a0473895cbf0e59c461644fc6684"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "expansion_theorem",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

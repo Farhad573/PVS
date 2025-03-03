@@ -1,0 +1,15 @@
+(prime_generating_function
+ (difference_is_20 0
+  (difference_is_20-1 nil 3950023675 ("" (grind) nil nil)
+   ((int_minus_int_is_int application-judgement "int" integers nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (posnat_expt application-judgement "posnat" exponentiation nil)
+    (even_times_int_is_even application-judgement "even_int" integers
+     nil)
+    (posint_times_posint_is_posint application-judgement "posint"
+     integers nil)
+    (f const-decl "nat" prime_generating_function nil)
+    (expt def-decl "real" exponentiation nil))
+   shostak)))
+

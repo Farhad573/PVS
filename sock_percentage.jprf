@@ -1,0 +1,127 @@
+{
+ "sock_percentage.total_socks_value": [
+  {
+   "info": {
+    "theory": "sock_percentage",
+    "formula": "total_socks_value",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "6ff8c79e7a0314f331eb099d306c5dcd7245d120f8ce5f95ece2947b2474ed5d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "total_socks_value",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "sock_percentage.red_socks_value": [
+  {
+   "info": {
+    "theory": "sock_percentage",
+    "formula": "red_socks_value",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "6ff8c79e7a0314f331eb099d306c5dcd7245d120f8ce5f95ece2947b2474ed5d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "red_socks_value",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "sock_percentage.red_is_twenty_percent": [
+  {
+   "info": {
+    "theory": "sock_percentage",
+    "formula": "red_is_twenty_percent",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "6ff8c79e7a0314f331eb099d306c5dcd7245d120f8ce5f95ece2947b2474ed5d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "red_is_twenty_percent",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "sock_percentage.percentage_calculation": [
+  {
+   "info": {
+    "theory": "sock_percentage",
+    "formula": "percentage_calculation",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "6ff8c79e7a0314f331eb099d306c5dcd7245d120f8ce5f95ece2947b2474ed5d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "percentage_calculation",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "sock_percentage.red_socks_percentage_correct": [
+  {
+   "info": {
+    "theory": "sock_percentage",
+    "formula": "red_socks_percentage_correct",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "96feca945253b079723acba082dc2b3cbf0b22b7eb15f11cfe6d2a22f5bc4272"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "red_socks_percentage_correct",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}
